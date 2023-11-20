@@ -791,7 +791,7 @@ def _parse_nodes_paths(response_json):
             del paths[platform_id]
     
     for stop_id, route_ids in stops.items():
-        nodes[stop_id]["routes"] = route_ids 
+        nodes[stop_id]["routes"] = list(route_ids)
     return nodes, paths, routes, stops, paths_routs
 
 
